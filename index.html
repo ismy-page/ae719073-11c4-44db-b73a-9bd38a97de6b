@@ -2,11 +2,239 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Princess Ledya's Birthday | ToyWizLand</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Local styles required by CI guardrails -->
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <!-- Sticky site header / nav -->
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a href="#hero" class="brand" aria-label="Go to top">ToyWizLand</a>
+        <nav class="site-nav" role="navigation" aria-label="Primary">
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#details">Details</a></li>
+            <li><a href="#highlights">Highlights</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+            <li><a href="#footer">More</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- Hero Section -->
+      <section id="hero" class="section hero" aria-label="Hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1 class="display">Princess Ledya's Birthday Celebration</h1>
+            <p class="tagline">Join us for magical adventures in ToyWizLand!</p>
+            <button class="btn btn-cta" data-scroll-target="#rsvp" aria-label="Skip to RSVP">Save My Spot</button>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="portrait" role="img" aria-label="Princess Ledya portrait placeholder">L</div>
+            <div class="sparkles" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Event Details Section -->
+      <section id="details" class="section details" aria-labelledby="details-title">
+        <div class="container">
+          <div class="details-head">
+            <h2 id="details-title" class="section-title">Event Details</h2>
+            <p class="details-sub">Dress in your favorite playful outfit for castles, bubbles, and sweets!</p>
+          </div>
+          <div class="details-grid">
+            <article class="detail-card" aria-label="Event Date">
+              <div class="icon" aria-hidden="true">
+                <!-- Calendar icon -->
+                <svg viewBox="0 0 24 24" width="28" height="28" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M7 2a1 1 0 1 1 2 0v1h6V2a1 1 0 1 1 2 0v1h1a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h1V2zM5 9h14v9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V9zm2-5H6a1 1 0 0 0-1 1v2h14V5a1 1 0 0 0-1-1h-1v1a1 1 0 1 1-2 0V4H9v1a1 1 0 1 1-2 0V4z"/></svg>
+              </div>
+              <div class="detail-body">
+                <h3>October 22</h3>
+                <p>Saturday at <strong>2:00 PM</strong></p>
+              </div>
+            </article>
+
+            <article class="detail-card" aria-label="Event Location">
+              <div class="icon" aria-hidden="true">
+                <!-- Location pin icon -->
+                <svg viewBox="0 0 24 24" width="28" height="28" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+              </div>
+              <div class="detail-body">
+                <h3>ToyWizLand</h3>
+                <p>Follow the floating balloons to the golden gate</p>
+              </div>
+            </article>
+
+            <article class="detail-card" aria-label="Event Time">
+              <div class="icon" aria-hidden="true">
+                <!-- Clock icon -->
+                <svg viewBox="0 0 24 24" width="28" height="28" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M12 1.75a10.25 10.25 0 1 0 0 20.5 10.25 10.25 0 0 0 0-20.5zm.75 5a.75.75 0 0 0-1.5 0v5.19l-3.22 1.86a.75.75 0 1 0 .75 1.3l3.72-2.14A.75.75 0 0 0 12.75 12V6.75z"/></svg>
+              </div>
+              <div class="detail-body">
+                <h3>2:00 PM</h3>
+                <p>Arrive a little early for sparkle check-in</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Highlights -->
+      <section id="highlights" class="section highlights" aria-labelledby="highlights-title">
+        <div class="container">
+          <h2 id="highlights-title" class="section-title">Experience Highlights</h2>
+          <div class="cards-grid">
+            <article class="card">
+              <div class="card-icon" aria-hidden="true">
+                <!-- Castle -->
+                <svg viewBox="0 0 64 64" width="36" height="36" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 30V18l6-4 6 4v12h4V14l6-4 6 4v16h4V22l6-4 6 4v28H6V30h6zm4 6h8v14h-8V36zm24 0h8v14h-8V36zM30 36h4v14h-4V36z"/></svg>
+              </div>
+              <h3>Castle Bubble Play</h3>
+              <p>Blow shimmering bubbles around our mini castle.</p>
+            </article>
+            <article class="card">
+              <div class="card-icon" aria-hidden="true">
+                <!-- Cupcake -->
+                <svg viewBox="0 0 64 64" width="36" height="36" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M32 10c6 0 10 4 10 8 4 0 8 4 8 8H14c0-4 4-8 8-8 0-4 4-8 10-8zM14 28h36l-4 24a6 6 0 0 1-6 6H24a6 6 0 0 1-6-6l-4-24z"/></svg>
+              </div>
+              <h3>Sweet Treats</h3>
+              <p>Cupcakes, cookies, and a magical tea bar.</p>
+            </article>
+            <article class="card">
+              <div class="card-icon" aria-hidden="true">
+                <!-- Parade toy -->
+                <svg viewBox="0 0 64 64" width="36" height="36" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8 46a6 6 0 1 0 12 0H44a6 6 0 1 0 12 0h4v-6l-6-12H22l-6 12H8v6zm8-24h28l4-8H16l4 8z"/></svg>
+              </div>
+              <h3>Toy Parades</h3>
+              <p>March with cuddly friends and twinkly wands.</p>
+            </article>
+            <article class="card">
+              <div class="card-icon" aria-hidden="true">
+                <!-- Music note -->
+                <svg viewBox="0 0 64 64" width="36" height="36" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M46 10v28.4a10 10 0 1 1-4-8V18l-16 4v16.4a10 10 0 1 1-4-8V14l24-6z"/></svg>
+              </div>
+              <h3>Music &amp; Dance</h3>
+              <p>Groove to cheerful beats across ToyWizLand.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Wishlist + RSVP -->
+      <section id="rsvp" class="section rsvp" aria-labelledby="rsvp-title">
+        <div class="container">
+          <h2 id="rsvp-title" class="section-title">Wishlist &amp; RSVP</h2>
+          <p class="intro">Help Princess Ledya pick toys to make her day magical! Select a few from the list or bring your own surprise!</p>
+
+          <form id="rsvp-form" class="rsvp-form" novalidate aria-describedby="form-status" aria-labelledby="rsvp-title">
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Name <span aria-hidden="true" class="req">*</span></label>
+                <input id="name" name="name" type="text" required autocomplete="name" />
+                <p class="hint">Your full name, please.</p>
+              </div>
+              <div class="field">
+                <label for="email">Email <span aria-hidden="true" class="req">*</span></label>
+                <input id="email" name="email" type="email" required autocomplete="email" />
+                <p class="hint">We'll only use this for event updates.</p>
+              </div>
+              <div class="field">
+                <label for="attendance">Attendance <span aria-hidden="true" class="req">*</span></label>
+                <select id="attendance" name="attendance" required>
+                  <option value="" selected disabled>Select an option</option>
+                  <option>Yes, I'll be there</option>
+                  <option>Sending wishes from afar</option>
+                </select>
+              </div>
+              <div class="field field--full">
+                <label for="message">RSVP message</label>
+                <textarea id="message" name="message" rows="3" placeholder="Add a sweet note (optional)"></textarea>
+              </div>
+            </div>
+
+            <fieldset class="wishlist">
+              <legend>Toy Wishlist</legend>
+              <div class="wishlist-grid">
+                <!-- 10 wishlist items -->
+                <label class="wish"><input type="checkbox" name="wishes" value="Sparkle Castle Playset" /> <span>Sparkle Castle Playset <em>• Choose me!</em></span></label>
+                <label class="wish"><input type="checkbox" name="wishes" value="Flutter Fairy Wings" /> <span>Flutter Fairy Wings <em>• Pick me!</em></span></label>
+                <label class="wish"><input type="checkbox" name="wishes" value="Magical Tea Party Set" /> <span>Magical Tea Party Set <em>• I sparkle!</em></span></label>
+                <label class="wish"><input type="checkbox" name="wishes" value="Glitter Roller Skates" /> <span>Glitter Roller Skates <em>• Zoom zoom!</em></span></label>
+                <label class="wish"><input type="checkbox" name="wishes" value="Plush Unicorn Companion" /> <span>Plush Unicorn Companion <em>• Neigh!</em></span></label>
+                <label class="wish"><input type="checkbox" name="wishes" value="Musical Toy Wand" /> <span>Musical Toy Wand <em>• Twinkle!</em></span></label>
+                <label class="wish"><input type="checkbox" name="wishes" value="Mini Mermaid Dreamhouse" /> <span>Mini Mermaid Dreamhouse <em>• Splash!</em></span></label>
+                <label class="wish"><input type="checkbox" name="wishes" value="Light-up Storybook" /> <span>Light-up Storybook <em>• Glow glow!</em></span></label>
+                <label class="wish"><input type="checkbox" name="wishes" value="Mini Artist Easel" /> <span>Mini Artist Easel <em>• Color me!</em></span></label>
+                <label class="wish"><input type="checkbox" name="wishes" value="Toy Garden Tea Cart" /> <span>Toy Garden Tea Cart <em>• Toot-toot!</em></span></label>
+              </div>
+              <label class="wish wish--own"><input id="ownGift" type="checkbox" name="ownGift" value="Own Gift" /> <span>We'll bring our own special surprise</span></label>
+            </fieldset>
+
+            <div class="actions">
+              <button class="btn" type="submit" aria-label="Send RSVP">Send Birthday Wishes</button>
+              <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Quote / Testimonial -->
+      <section id="quote" class="section quote" aria-label="Quote">
+        <div class="container">
+          <figure class="bubble">
+            <blockquote>
+              <p>
+                "I can't wait to celebrate with you!"
+              </p>
+            </blockquote>
+            <figcaption>&mdash; Princess Ledya</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="site-footer" role="contentinfo">
+      <div class="container footer-grid">
+        <div class="foot-about">
+          <h3 class="footer-title">A birthday note</h3>
+          <p>Toys are suggestions only&mdash;your presence is the real gift. Thank you for helping make the day magical!</p>
+        </div>
+        <div class="foot-contact">
+          <h3 class="footer-title">RSVP Help</h3>
+          <ul class="contact-list">
+            <li><span class="icon" aria-hidden="true">&#x2709;&#xFE0F;</span> <a href="mailto:parent@example.com">parent@example.com</a></li>
+            <li><span class="icon" aria-hidden="true">&#x260E;&#xFE0F;</span> <a href="tel:+15551234567">+1 (555) 123-0567</a></li>
+          </ul>
+        </div>
+        <div class="foot-social">
+          <h3 class="footer-title">Follow the sparkles</h3>
+          <div class="socials" role="group" aria-label="Social icons">
+            <span class="social" aria-hidden="true" title="Star">&#x2B50;</span>
+            <span class="social" aria-hidden="true" title="Heart">&#x2764;&#xFE0F;</span>
+            <span class="social" aria-hidden="true" title="Balloon">&#x1F388;</span>
+          </div>
+        </div>
+      </div>
+      <p class="legal">&copy; <span id="year"></span> ToyWizLand. All rights reserved.</p>
+    </footer>
+
+    <!-- Local script required by CI guardrails -->
     <script src="./script.js" defer></script>
   </body>
 </html>
+
